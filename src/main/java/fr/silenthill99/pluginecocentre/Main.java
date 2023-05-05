@@ -23,6 +23,7 @@ public final class Main extends JavaPlugin
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new InventoryManager(), this);
         pm.registerEvents(new Events(), this);
+        getCommand("menu").setExecutor(new MenuCommand());
         getCommand("test").setExecutor(new TestCommand());
     }
 

@@ -4,3 +4,4 @@ main: fr.silenthill99.pluginecocentre.Main
 api-version: 1.16
 commands:
   test:
+  menu:

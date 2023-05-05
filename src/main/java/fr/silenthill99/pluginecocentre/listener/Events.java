@@ -1,8 +1,6 @@
 package fr.silenthill99.pluginecocentre.listener;
 
-import fr.silenthill99.pluginecocentre.Main;
 import fr.silenthill99.pluginecocentre.timer.StandTimer;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -12,7 +10,6 @@ import org.bukkit.event.player.PlayerChatEvent;
 
 public class Events implements Listener
 {
-    Main main = Main.getInstance();
 
     @SuppressWarnings("deprecation")
     @EventHandler
@@ -25,7 +22,6 @@ public class Events implements Listener
         stand.setGravity(false);
         stand.setVisible(false);
         stand.setInvulnerable(true);
-        StandTimer timer = new StandTimer(player, stand);
-        Bukkit.getScheduler().runTaskTimer(main, timer, 0, 1);
+        new StandTimer(player, stand);
     }
 }
